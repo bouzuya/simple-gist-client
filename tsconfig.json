@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "outDir": ".tmp/",
+    "rootDir": ".",
+    "sourceMap": false,
+    "target": "es5"
+  },
+  "files": [
+    "./examples/crud.ts",
+    "./src/index.ts",
+    "./test/index.ts",
+    "./typings/main.d.ts",
+    "./node_modules/typescript/lib/lib.es6.d.ts"
+  ]
+}

@@ -1,0 +1,5 @@
+# for examples/
+# cp _envrc .envrc
+# vi .envrc
+# source .envrc
+export GITHUB_TOKEN='...'

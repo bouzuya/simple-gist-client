@@ -1,0 +1,49 @@
+{
+  "name": "simple-gist-client",
+  "description": "simple gist client",
+  "version": "0.1.0",
+  "author": {
+    "name": "bouzuya",
+    "email": "m@bouzuya.net",
+    "url": "http://bouzuya.net/"
+  },
+  "ava": {
+    "files": [
+      ".tmp/test"
+    ],
+    "source": [
+      "!**/*.js"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/bouzuya/simple-gist-client/issues"
+  },
+  "dependencies": {
+    "node-fetch": "1.5.2"
+  },
+  "devDependencies": {
+    "ava": "0.14.0",
+    "proxyquire": "1.7.9",
+    "sinon": "1.17.4",
+    "typescript": "1.8.10",
+    "typings": "0.8.1"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.d.ts"
+  ],
+  "homepage": "https://github.com/bouzuya/simple-gist-client#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bouzuya/simple-gist-client.git"
+  },
+  "scripts": {
+    "build": "tsc && ([ -d lib ] || mkdir lib) && cp -R .tmp/src/ lib/",
+    "clean": "rm -rf .tmp",
+    "prepublish": "npm run clean && npm run build",
+    "test": "ava"
+  }
+}

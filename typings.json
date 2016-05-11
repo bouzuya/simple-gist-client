@@ -1,0 +1,12 @@
+{
+  "name": "simple-gist-client",
+  "version": false,
+  "ambientDependencies": {
+    "node": "registry:dt/node#4.0.0+20160509154515",
+    "node-fetch": "github:bouzuya/my-dts/node-fetch/node-fetch.d.ts#d735250dcf9503affb1bde712ce08e773432cb09"
+  },
+  "devDependencies": {
+    "proxyquire": "registry:npm/proxyquire#1.0.0+20160211003958",
+    "sinon": "registry:npm/sinon#1.16.0+20160427193336"
+  }
+}
