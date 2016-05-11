@@ -41,7 +41,7 @@
     "url": "https://github.com/bouzuya/simple-gist-client.git"
   },
   "scripts": {
-    "build": "tsc && ([ -d lib ] || mkdir lib) && cp -R .tmp/src/ lib/",
+    "build": "typings i && tsc && ([ -d lib ] || mkdir lib) && cp -R .tmp/src/ lib/",
     "clean": "rm -rf .tmp",
     "prepublish": "npm run clean && npm run build",
     "test": "ava"
