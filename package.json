@@ -7,12 +7,9 @@
     "email": "m@bouzuya.net",
     "url": "http://bouzuya.net/"
   },
-  "ava": {
-    "files": [
-      ".tmp/test"
-    ],
-    "source": [
-      "!**/*.js"
+  "babel": {
+    "presets": [
+      "power-assert"
     ]
   },
   "bugs": {
@@ -24,14 +21,18 @@
   "devDependencies": {
     "@types/node": "^8.0.19",
     "@types/node-fetch": "^1.6.7",
+    "@types/power-assert": "^1.4.29",
     "@types/proxyquire": "^1.3.27",
     "@types/sinon": "^2.3.3",
-    "ava": "0.14.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-power-assert": "^1.0.0",
+    "beater": "^5.0.0",
     "cpx": "^1.5.0",
     "npm-run-all": "^4.0.2",
-    "proxyquire": "1.7.9",
+    "power-assert": "^1.4.4",
+    "proxyquire": "^1.8.0",
     "rimraf": "^2.6.1",
-    "sinon": "1.17.4",
+    "sinon": "^3.0.0",
     "typescript": "^2.4.2"
   },
   "files": [
@@ -47,12 +48,15 @@
     "url": "https://github.com/bouzuya/simple-gist-client.git"
   },
   "scripts": {
-    "build": "npm-run-all -s \"build:ts\" \"build:lib\"",
-    "build:lib": "cpx \".tmp/src/*.{js,ts}\" lib",
+    "build": "npm-run-all -s \"build:ts\"  \"build:es5\" \"build:lib\"",
+    "build:es5": "babel -d \".tmp/es5\" \".tmp/es2017\"",
+    "build:lib": "npm-run-all -p \"build:lib:*\"",
+    "build:lib:dts": "cpx \".tmp/es2017/src/*.d.ts\" lib",
+    "build:lib:js": "cpx \".tmp/es5/src/*.js\" lib",
     "build:ts": "tsc",
     "clean": "rimraf .tmp lib",
     "prepublish": "npm-run-all -s clean build",
-    "test": "ava"
+    "test": "node .tmp/es5/test/index"
   },
   "types": "lib/index.d.ts"
 }

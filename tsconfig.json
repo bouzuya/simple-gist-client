@@ -5,10 +5,10 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
-    "outDir": ".tmp/",
+    "outDir": ".tmp/es2017",
     "rootDir": ".",
     "sourceMap": false,
-    "target": "es2015"
+    "target": "es2017"
   },
   "files": [
     "./examples/crud.ts",
