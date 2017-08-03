@@ -8,13 +8,11 @@
     "outDir": ".tmp/",
     "rootDir": ".",
     "sourceMap": false,
-    "target": "es5"
+    "target": "es2015"
   },
   "files": [
     "./examples/crud.ts",
     "./src/index.ts",
-    "./test/index.ts",
-    "./typings/main.d.ts",
-    "./node_modules/typescript/lib/lib.es6.d.ts"
+    "./test/index.ts"
   ]
 }

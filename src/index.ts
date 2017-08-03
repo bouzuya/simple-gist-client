@@ -1,4 +1,4 @@
-import * as fetch from 'node-fetch';
+import fetch from 'node-fetch';
 
 export type GistId = string;
 
@@ -43,7 +43,7 @@ export class SimpleGistClient {
     const options = { method: 'GET' };
     return this._fetch(path, options).then(({ body }) => {
       const content = body.files[SimpleGistClient._dataFileName].content;
-      return this._deserialize(content);
+      return this._deserialize<T>(content);
     });
   }
 

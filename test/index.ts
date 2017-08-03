@@ -25,7 +25,7 @@ test('create', t => {
   const id = 'abc';
   const response = Promise.resolve({
     status: 201,
-    json: () => Promise.resolve({ id })
+    json: () => Promise.resolve<any>({ id })
   });
   fetch.returns(response);
 
@@ -89,7 +89,7 @@ test('read', t => {
   const data = 456;
   const response = Promise.resolve({
     status: 200,
-    json: () => Promise.resolve({
+    json: () => Promise.resolve<any>({
       id,
       files: {
         'data.json': {
@@ -123,7 +123,9 @@ test('update', t => {
   const data = 789;
   const response = Promise.resolve({
     status: 200,
-    json: () => Promise.resolve({ id, data: JSON.stringify({ data }) })
+    json: () => Promise.resolve<any>({
+      id, data: JSON.stringify({ data })
+    })
   });
   fetch.returns(response);
 
