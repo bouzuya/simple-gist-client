@@ -23,7 +23,10 @@
   },
   "devDependencies": {
     "ava": "0.14.0",
+    "cpx": "^1.5.0",
+    "npm-run-all": "^4.0.2",
     "proxyquire": "1.7.9",
+    "rimraf": "^2.6.1",
     "sinon": "1.17.4",
     "typescript": "1.8.10",
     "typings": "0.8.1"
