@@ -1,7 +1,7 @@
 {
   "name": "simple-gist-client",
   "description": "simple gist client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "bouzuya",
     "email": "m@bouzuya.net",
@@ -36,7 +36,6 @@
   "keywords": [],
   "license": "MIT",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/bouzuya/simple-gist-client.git"
@@ -46,5 +45,6 @@
     "clean": "rm -rf .tmp",
     "prepublish": "npm run clean && npm run build",
     "test": "ava"
-  }
+  },
+  "types": "lib/index.d.ts"
 }
