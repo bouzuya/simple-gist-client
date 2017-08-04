@@ -9,6 +9,14 @@
   },
   "babel": {
     "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 4
+          }
+        }
+      ],
       "power-assert"
     ]
   },
@@ -25,6 +33,7 @@
     "@types/proxyquire": "^1.3.27",
     "@types/sinon": "^2.3.3",
     "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-power-assert": "^1.0.0",
     "beater": "^5.0.0",
     "cpx": "^1.5.0",
